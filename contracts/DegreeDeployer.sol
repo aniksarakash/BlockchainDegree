@@ -6,7 +6,7 @@ import "./BaseDegree.sol";
 
 contract DegreeDeployer {
     BaseDegree[] public degreesArray;
-    mapping(uint64 => uint256) regnoToIndex;
+    mapping(string => uint256) regnoToIndex;
     address public owner;
 
     constructor() {
@@ -20,7 +20,7 @@ contract DegreeDeployer {
 
     function createDegree(
         string memory _name,
-        uint64 _regno,
+        string memory _regno,
         string memory _prog,
         string memory _branch,
         string memory _gender,
@@ -50,7 +50,7 @@ contract DegreeDeployer {
         return degreesArray[index];
     }
 
-    function viewDegreeUsingRegno(uint64 _regno)
+    function viewDegreeUsingRegno(string memory _regno)
         public
         view
         returns (BaseDegree)

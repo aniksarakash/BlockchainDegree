@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 contract BaseDegree {
     string name;
-    uint64 regno;
+    string regno;
     string prog;
     string branch;
     string gender;
@@ -14,7 +14,7 @@ contract BaseDegree {
 
     constructor(
         string memory _name,
-        uint64 _regno,
+        string memory _regno,
         string memory _prog,
         string memory _branch,
         string memory _gender,
