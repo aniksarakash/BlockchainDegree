@@ -8,9 +8,13 @@ contract DegreeDeployer {
     BaseDegree[] public degreesArray;
     mapping(string => uint256) regnoToIndex;
     address public owner;
+    string public owner_name;
+    string public purpose;
 
     constructor() {
         owner = msg.sender;
+        owner_name = "MNNIT Allahabad";
+        purpose = "Student Degrees";
     }
 
     modifier isOwner() {
