@@ -3,14 +3,14 @@
 pragma solidity ^0.8.0;
 
 contract BaseDegree {
-    string name;
-    string regno;
-    string prog;
-    string branch;
-    string gender;
-    uint64 cpi;
-    string nationality;
-    string category;
+    string public name;
+    string public regno;
+    string public prog;
+    string public branch;
+    string public gender;
+    uint64 public cpi;
+    string public nationality;
+    string public category;
 
     constructor(
         string memory _name,

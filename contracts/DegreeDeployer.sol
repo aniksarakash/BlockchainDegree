@@ -57,4 +57,33 @@ contract DegreeDeployer {
     {
         return viewDegreeUsingIndex(regnoToIndex[_regno]);
     }
+
+    function viewDegreeDetails(string memory _regno)
+        public
+        view
+        returns (
+            BaseDegree,
+            string memory,
+            string memory,
+            string memory,
+            string memory,
+            string memory,
+            uint64,
+            string memory,
+            string memory
+        )
+    {
+        BaseDegree deg = viewDegreeUsingRegno(_regno);
+        return (
+            deg,
+            deg.name(),
+            deg.regno(),
+            deg.prog(),
+            deg.branch(),
+            deg.gender(),
+            deg.cpi(),
+            deg.nationality(),
+            deg.category()
+        );
+    }
 }
